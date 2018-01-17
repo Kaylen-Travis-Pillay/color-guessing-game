@@ -1,0 +1,37 @@
+body{
+    background-color: #1F1F1F;
+}
+.heading{
+    background-color: #2C4B69;
+}
+.navigation-tab{
+    background-color: #E5E6E6;
+}
+.custom-text{
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+}
+.nav.navbar-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.new-game{
+    margin-left: 30%;
+}
+.nav-buttons{
+    border: transparent;
+    background-color: #E5E6E6;
+    color: #2C4B69;
+}
+.game-level{
+    margin-left:25%;
+}
+.active-level{
+    background: #2C4B69;
+    color: #E5E6E6;
+}
+.button-hover{
+    background: rgb(201, 201, 201);
+}
