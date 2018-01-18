@@ -1,63 +1,34 @@
 var new_game_btn = document.getElementById("new-game-btn");
 var easy_btn = document.getElementById("easy-level-btn");
 var hard_btn = document.getElementById("hard-level-btn");
-var current_level = "hard";
+var block_list = document.getElementsByClassName("block");
+var button_arr = [easy_btn, hard_btn];
+var current_level = "easy";
 
-//This performs the mouse events on the new game button
-new_game_btn.addEventListener("mouseover", function()
+hard_btn.addEventListener("click", function()
 {
-    this.classList.add("button-hover");
-});
-new_game_btn.addEventListener("mouseout", function () 
-{
-    this.classList.remove("button-hover");
-});
-new_game_btn.addEventListener("mousedown", function () 
-{
-    this.classList.remove("button-hover");
-    this.classList.add("active-level");
-});
-new_game_btn.addEventListener("mouseup", function () 
-{
-    this.classList.remove("active-level");
-    this.classList.add("button-hover");
+    if(current_level === "easy")
+    {
+        button_arr.forEach(function (btn) {
+            btn.classList.toggle("active-level");
+        });
+        current_level = "hard";
+    } 
 });
 
-//This performs the events on the easy button
-easy_btn.addEventListener("mouseover", function()
+easy_btn.addEventListener("click", function () 
 {
-    if(current_level !== "easy")
+    if(current_level === "hard")
     {
-        this.classList.add("button-hover");
+        button_arr.forEach(function (btn) {
+            btn.classList.toggle("active-level");
+        });
+        current_level = "easy";
     }
 });
-easy_btn.addEventListener("mouseout", function()
-{
-    if(current_level !== "easy")
-    {
-        this.classList.remove("button-hover");
-    }
-});
-easy_btn.addEventListener("mousedown", function()
-{
-    if(current_level !== "easy")
-    {
-        this.classList.remove("button-hover");
-        this.classList.add("active-level");
-    }
-});
-easy_btn.addEventListener("mouseup", function()
-{
-    if(current_level !== "easy")
-    {
-        this.classList.remove("active-level");
-        this.classList.add("button-hover");
-    }    
-});
-easy_btn.addEventListener("click", function()
-{
-    if(current_level !== "easy")
-    {
 
-    }
-});
+for (var index = 0; index < block_list.length; index++) {
+    block_list[index].addEventListener("click", function(){
+        this.classList.remove("block");
+    });
+}

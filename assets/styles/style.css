@@ -35,3 +35,17 @@ body{
 .button-hover{
     background: rgb(201, 201, 201);
 }
+.block{
+    float: left;
+    background-color: red;
+    padding-bottom: 13%;
+    margin-left: 5%;
+    width: 15%;
+}
+.block-row{
+    margin-left:25%;
+    margin-top:3%;
+}
+.clear{
+    clear: both;
+}
